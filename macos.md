@@ -78,11 +78,12 @@ The plugin will be installed into your Grafana plugins directory, which by defau
 To start the Grafana server, run: `brew services start grafana`
 
 Navigate to the Grafana homepage 
-for local Mac-OS installation: http://localhost:3000  
-for OCI Instance installation: http://<VM IP>:3000. Make sure OCI instance IP and port are accessible to you.
+for local Mac-OS installation: `http://localhost:3000`  
+for OCI Instance installation: `http://<VM IP>:3000`
+Make sure OCI instance IP and port are accessible to you.
 To find the IP address of the newly-created instance, in the OCI Console go to Compute > Instances > [Your Instance]. The Public IP address is listed under the Primary VNIC Information section. 
 You can also connect to Grafana running on your VM, locally via port forwarding, by running:
-ssh opc@[Instance Public IP] -L 3000:localhost:3000.
+`ssh opc@[Instance Public IP] -L 3000:localhost:3000`
 
 
 
