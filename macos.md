@@ -1,11 +1,13 @@
-# Local Installation (MacOS) - Oracle Cloud Logging Data Source for Grafana
+# Installation for Oracle Cloud Logging Data Source for Grafana
 
 ## Background
 
-Grafana is a popular technology that makes it easy to visualize metrics and logs. The Oracle Cloud Infrastructure Grafana Plugin for OCI Logging can be used to extend Grafana by adding OCI Logging as a data source. The plugin allows you to retrieve logs related to a number of OCI resources: Compute, Networking, Storage, and custom logs. Once in Grafana logs can be analysed along with metrics, giving us single pane of glass for application monitoring. 
+Grafana is a popular technology that makes it easy to visualize metrics and logs. The OCI Logging Grafana Plugin can be used to extend Grafana by adding OCI Logging as a data source in Grafana. 
+The plugin allows you to retrieve logs related to a number of OCI resources: Compute, Networking, Storage, and custom logs. 
+Once these logs are in Grafana, they can be analysed along with metrics, giving us single pane of glass for application monitoring. 
 
-This walkthrough is intended for those who want to deploy Grafana and the OCI Logging service as a data source on a local server.
-
+This walk-through is intended for those who want to deploy Grafana and the OCI Logging service as a data source.
+We will specifically focus on installation on local Mac-OS and 
 Make sure you have access to the Logging service configured for the resources you want to fetch logs for.
 
 For custom logs from your application, see [Custom Logging on OCI](https://docs.cloud.oracle.com/en-us/iaas/Content/Logging/Concepts/custom_logs.htm).
@@ -46,8 +48,11 @@ Next, create a [policy](https://docs.cloud.oracle.com/iaas/Content/Identity/Conc
 ## Install Grafana and the OCI Logging Data Source for Grafana Plugin 
 
 To [install the data source](https://grafana.com/plugins/oci-datasource/installation) make sure you are running [Grafana 3.0](https://grafana.com/get) or later.
-On a MacOS system run: `brew install grafana`. 
-Use the [grafana-cli tool](http://docs.grafana.org/plugins/installation/) to install the Oracle Cloud Logging Data Source for Grafana from the command line:
+For installing Grafana
+on Mac-OS run: `brew install grafana`
+on Oracle Linux compatible distro run: `sudo yum install grafana`
+
+After Grafana installation, use the [grafana-cli tool](http://docs.grafana.org/plugins/installation/) to install the Oracle Cloud Logging Data Source for Grafana from the command line:
 
 ```
 grafana-cli plugins install oci-logging-datasource
@@ -73,8 +78,8 @@ The plugin will be installed into your Grafana plugins directory, which by defau
 To start the Grafana server, run: `brew services start grafana`
 
 Navigate to the Grafana homepage 
-at http://localhost:3000 for local MAC OS installation
-at http://<VM IP>:3000 for OCI Instance installation. Make sure instance IP and port are accessible to you.
+for local Mac-OS installation: http://localhost:3000  
+for OCI Instance installation: http://<VM IP>:3000. Make sure OCI instance IP and port are accessible to you.
 To find the IP address of the newly-created instance, in the OCI Console go to Compute > Instances > [Your Instance]. The Public IP address is listed under the Primary VNIC Information section. 
 You can also connect to Grafana running on your VM, locally via port forwarding, by running:
 ssh opc@[Instance Public IP] -L 3000:localhost:3000.
