@@ -1,4 +1,4 @@
-# Installation for Oracle Cloud Logging Data Source for Grafana
+# Installation of Oracle Cloud Logging Data Source for Grafana
 
 ## Background
 
