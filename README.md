@@ -4,7 +4,7 @@
 
 Grafana is a popular technology that makes it easy to visualize metrics and logs. The OCI Logging Grafana Plugin can be used to extend Grafana by adding OCI Logging as a data source in Grafana. 
 The plugin allows you to retrieve logs related to a number of OCI resources: Compute, Networking, Storage, and custom logs. 
-Once these logs are in Grafana, they can be analysed along with metrics, giving us single pane of glass for application monitoring. 
+Once these logs are in Grafana, they can be analysed along with metrics, giving you a single pane of glass for application monitoring. 
 
 This walk-through is intended for those who want to deploy Grafana and the OCI Logging service as a data source.
 We will specifically focus on installation on local Mac-OS and 
