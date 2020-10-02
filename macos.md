@@ -13,7 +13,7 @@ Make sure you have access to the Logging service configured for the resources yo
 For custom logs from your application, see [Custom Logging on OCI](https://docs.cloud.oracle.com/en-us/iaas/Content/Logging/Concepts/custom_logs.htm).
 ## Grafana IAM configuration 
 
-###For Mac-OS
+### For Mac-OS
 #### Install the Oracle Cloud Infrastructure CLI 
 
 The [Oracle Cloud Infrastructure CLI](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm) provides you with a way to perform tasks in OCI from your command line rather than the OCI Console. It does so by making REST calls to the [OCI APIs](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm). We will be using the CLI to authenticate between our local environment hosting Grafana and OCI in order to pull in metrics. The CLI is built on Python (version 2.7.5 or 3.5 or later), running on Mac, Windows, or Linux.
@@ -33,7 +33,7 @@ Under the **Policy** tab switch to the root compartment and click **Create Polic
 
 ![usrPolicy](images/usrPolicy.png)
 
-###For compute-instance/VM on OCI
+### For compute-instance/VM on OCI
 #### Create Dynamic Group for your instance 
 Provision an Oracle Linux [virtual machine](https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm) in OCI connected to a [Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVCNs.htm) with access to the public internet. If you do not already have access to a Virtual Cloud Network with access to the public internet you can navigate to **Virtual Cloud Networks** under **Networking** and click **Create Virtual Cloud Network**. Choosing the `CREATE VIRTUAL CLOUD NETWORK PLUS RELATED RESOURCES` option will result in a VCN with an Internet Routing Gateway and Route Tables configured for access to the public internet. Three subnets will be created: one in each availability domain in the region.
 
