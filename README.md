@@ -1,6 +1,6 @@
 # Installation of Oracle Cloud Logging Data Source for Grafana
 
-## Background
+## Introduction
 
 Grafana is a popular technology that makes it easy to visualize metrics and logs. The OCI Logging Grafana Plugin can be used to extend Grafana by adding OCI Logging as a data source in Grafana. 
 The plugin allows you to retrieve logs related to a number of OCI resources: Compute, Networking, Storage, and custom logs. 
@@ -49,7 +49,7 @@ Next, create a [policy](https://docs.cloud.oracle.com/iaas/Content/Identity/Conc
 
 ![dgPolicy](images/dgPolicy.png)
 
-## Install Grafana and the OCI Logging Data Source for Grafana Plugin 
+### Install Grafana and then OCI Logging Data Source for Grafana Plugin 
 
 To [install the data source](https://grafana.com/plugins/oci-datasource/installation) make sure you are running [Grafana 3.0](https://grafana.com/get) or later.
 For installing Grafana
@@ -65,7 +65,7 @@ grafana-cli plugins install oci-logging-datasource
 
 The plugin will be installed into your Grafana plugins directory, which by default located at /var/lib/grafana/plugins. [Here is more information on the CLI tool](http://docs.grafana.org/plugins/installation/).
 
-### Manually installation 
+#### Manually installation 
  Alternatively, you can manually download the .tar file and unpack it into your /grafana/plugins directory. To do so, change to the Grafana plugins directory: `cd /usr/local/var/lib/grafana/plugins`. Download the OCI Grafana Plugin: wget `https://github.com/oracle/oci-grafana-plugin/releases/download/v2.0.0/plugin.tar`. Create a directory and install the plugin: `mkdir oci && tar -C oci -xvf plugin.tar` and then remove the tarball: `rm plugin.tar`
 
 >  **Additional step for Grafana 7**. Open the grafana configuration  *grafana.ini* file and add the `allow_loading_unsigned_plugins = "oci-logging-datasource"`in the *plugins* section.
@@ -91,7 +91,7 @@ You can also connect to Grafana running on your VM, locally via port forwarding,
 
 
 
-## Configure Grafana
+### Configure Grafana
 
 ![admin_admin](images/admin_admin.png)
 
@@ -115,7 +115,7 @@ Click **Save & Test** to return to the home dashboard.
 
 ![ociLogsDSsetup](images/ociLogsDSsetup.png)
 
-## Next Steps to use the OCI Logs as data source for your Grafana panel
+### Next Steps to use the OCI Logs as data source for your Grafana panel
 
 As shown below in the image, follow the steps 
 1. Select **Oracle Cloud Infrastructure Logs** as data source from the dropdown
