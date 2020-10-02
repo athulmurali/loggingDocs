@@ -79,7 +79,9 @@ The plugin will be installed into your Grafana plugins directory, which by defau
 ```
 
 
-To start the Grafana server, run: `brew services start grafana`
+To start the Grafana server run,
+on MAC OS : `brew services start grafana`
+on OCI Instance/VM: `sudo systemctl start grafana-server`
 
 Navigate to the Grafana homepage 
 for local Mac-OS installation: `http://localhost:3000`  
