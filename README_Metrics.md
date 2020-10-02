@@ -48,4 +48,6 @@ Next, create a [policy](https://docs.cloud.oracle.com/iaas/Content/Identity/Conc
 
 ![alt text](https://github.com/mayur-oci/loggingDocs/blob/main/images/dgPolicy.png?raw=true)
 
+## For more information
+[Github repository](https://github.com/oracle/oci-grafana-plugin)
 
